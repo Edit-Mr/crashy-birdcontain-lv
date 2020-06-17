@@ -7,6 +7,7 @@ input.onButtonPressed(Button.B, function () {
 let emptyObstacleY = 0
 let ticks = 0
 let bird: game.LedSprite = null
+game.setScore(0)
 let Rank = 1000
 let index = 0
 let obstacles: game.LedSprite[] = []
@@ -32,6 +33,7 @@ basic.forever(function () {
             game.gameOver()
         }
     }
+    game.addScore(1)
     ticks += 1
     Rank = Rank * 19 / 20
     basic.pause(Rank)
